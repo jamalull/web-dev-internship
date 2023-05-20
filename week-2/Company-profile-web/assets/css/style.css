@@ -2,19 +2,40 @@
     font-family: "THICCCBOI";
     src: url('../fonts/TTF/THICCCBOI-Bold.ttf') format('truetype');
 }
+@font-face {
+    font-family: "THICCCBOI EXTRA BOLD";
+    src: url('../fonts/TTF/THICCCBOI-ExtraBold.ttf') format('truetype');
+}
+@font-face {
+    font-family: "THICCCBOI lIGHT";
+    src: url('../fonts/TTF/THICCCBOI-Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: "THICCCBOI MEDIUM";
+    src: url('../fonts/TTF/THICCCBOI-Medium.ttf') format('truetype');
+}
 
 body {
-    background-color: #fefefe;
+    background-color: #F3F4F6;
 }
 
+/* 
+===================================
+NAVBAR
+=================================== */
+
 .top-navbar {
-    top: 0;
+    margin: auto;
+    width: 80%;
+    top: 20px;
     position: sticky;
 }
+
 .navbar {
     background-color: white;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    border-radius: 10px;
 }
 
 .navbar img {
@@ -42,8 +63,61 @@ body {
     color: black;
 }
 
+.medsos {
+    margin-right: 20px;
+}
 
 
-.banner {
-    height: 1000px;
+/* 
+===================================
+SECTION 1
+=================================== */
+.section1 {
+    padding-top: 100px;
+
+}
+.section1 h1 {
+    font-family: THICCCBOI EXTRA BOLD;
+    text-align: center;
+    font-size: xx-large;
+}
+
+.section1 h2 {
+    width: 50%;
+    font-family: THICCCBOI LIGHT;
+    text-align: center;
+    margin: auto;
+}
+.section1 img {
+    width: 50%;
+    margin-top: 105px;
+    
+}
+
+
+/* Ilustration Colour => 37474F */
+/* 
+===================================
+SECTION 2
+===================================  */
+.section2 {
+    padding-top: 200px;
+    margin-left: 100px;
+    margin-right: 100px;
+    display: flex;
+}
+.section2 img {
+    width: 40%;
+    
+}
+.section2 h1 {
+    font-family: THICCCBOI EXTRA BOLD;
+    font-size: xx-large;
+}
+.section2 h2 {
+    font-family: THICCCBOI LIGHT;
+    
+}
+.section2 div {
+    margin-left: 20px;
 }
