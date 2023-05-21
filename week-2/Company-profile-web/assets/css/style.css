@@ -1,5 +1,5 @@
 @font-face {
-    font-family: "THICCCBOI";
+    font-family: "THICCCBOI BOLD";
     src: url('../fonts/TTF/THICCCBOI-Bold.ttf') format('truetype');
 }
 @font-face {
@@ -13,6 +13,10 @@
 @font-face {
     font-family: "THICCCBOI MEDIUM";
     src: url('../fonts/TTF/THICCCBOI-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: "THICCCBOI REGULAR";
+    src: url('../fonts/TTF/THICCCBOI-Regular.ttf') format('truetype');
 }
 
 body {
@@ -36,6 +40,7 @@ NAVBAR
     display: flex;
     justify-content: space-between;
     border-radius: 10px;
+    opacity: 80%;
 }
 
 .navbar img {
@@ -51,7 +56,7 @@ NAVBAR
 }
 .menu ul li, .medsos ul li {
     list-style: none;
-    font-family: THICCCBOI;
+    font-family: THICCCBOI BOLD;
     font-size: 20px;
     font-weight: bold;
     justify-content: center;
@@ -98,26 +103,69 @@ SECTION 1
 /* Ilustration Colour => 37474F */
 /* 
 ===================================
-SECTION 2
+SECTION 2 and 3
 ===================================  */
-.section2 {
+.section2, .section3 {
     padding-top: 200px;
     margin-left: 100px;
     margin-right: 100px;
     display: flex;
 }
-.section2 img {
+.section2 img, .section3 img {
     width: 40%;
     
 }
-.section2 h1 {
+.section2 h1, .section3 h1 {
     font-family: THICCCBOI EXTRA BOLD;
     font-size: xx-large;
 }
-.section2 h2 {
-    font-family: THICCCBOI LIGHT;
-    
+.section2 h2, .section3 h2 {
+    font-family: THICCCBOI REGULAR;
 }
-.section2 div {
+.section2 div, .section3 div{
     margin-left: 20px;
+}
+
+.section2-list, .section3-list {
+    display: flex;
+    gap: 100px;
+}
+.section2-list ul, .section3-list ul{
+    list-style-image: url('../img/checked_18px.png');
+    font-family: THICCCBOI REGULAR;
+    margin: 0;
+    padding: 0;
+}
+
+/* 
+===================================
+FOOTER
+===================================  */
+footer {
+    background-color: #dbdbdb;
+}
+.footer {
+    margin-top: 200px;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+    /* gap: 20px; */
+}
+.footer h1, .footer h2 {
+    font-family: THICCCBOI BOLD;
+}
+.footer ul li , .footer p{
+    font-family: THICCCBOI REGULAR;
+}
+.footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.footer ul li a{
+    text-decoration: none;
+    color: black;
 }
