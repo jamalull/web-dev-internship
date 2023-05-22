@@ -146,6 +146,7 @@ SECTION 2 and 3
     padding: 0;
 }
 
+
 /* 
 ===================================
 ABOUT US
@@ -222,6 +223,28 @@ ABOUT US
     color: black;
 }
 
+/* VISION AND MISSION ABOUT US */
+.section-visimisi {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 200px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.section-visimisi h1 {
+    font-family: THICCCBOI EXTRA BOLD;
+}
+.section-visimisi h3 {
+    font-family: THICCCBOI REGULAR;
+    line-height: 30px;
+}
+.section-visimisi div {
+    background-color: #dbdbdb6a;
+    border-radius: 10px;
+    padding: 20px;
+}
+
 
 /* SECTION CLIENTS */
 .section-client {
@@ -261,6 +284,8 @@ ABOUT US
 }
 
 
+
+
 /* 
 ===================================
 CONTACT
@@ -269,9 +294,57 @@ CONTACT
     height: 1000px;
 }
 
+.bgContact {
+    width: 100%;
+    height: 80%;
+    background-color:#dbdbdb99;
+    position: absolute;
+    z-index: -1;
+}
 
+.section-contact {
+    padding-top: 100px;
 
+}
+.section-contact h1{
+    font-family: THICCCBOI EXTRA BOLD;
+    text-align: center;
+    font-size: xx-large;
+}
 
+.section-contact h2{
+    width: 70%;
+    font-family: THICCCBOI LIGHT;
+    text-align: center;
+    margin: auto;
+}
+.section-contact img {
+    width: 50%;
+    margin-top: 50px;
+    
+}
+
+/* SECTION CONTACT  */
+.info-contact {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.info-contact h1 {
+    font-family: THICCCBOI BOLD;
+}
+.info-contact h3 {
+    font-family: THICCCBOI REGULAR;
+}
+
+.info-contact div {
+    text-align: center;
+    background-color: #dbdbdb6a;
+    border-radius: 10px;
+    padding: 30px;
+}
 
 
 
@@ -310,10 +383,34 @@ footer {
 }
 
 
-
-
-
-
+@media (max-width : 800px){
+    .section2, .footer, .section-visimisi, section-about3, 
+    .img-team, .section-clientsProfile, .section-client, .info-contact{
+        display: flex;
+        flex-direction: column;
+    }
+    .section3 {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .section2 img, .section3 img {
+        width: 80%;
+        margin: auto;
+    }
+    .img-team {
+        display: none;
+    }
+    .section-clientsProfile {
+        align-items: center;
+        gap: 20px;
+    }
+    .section-contact {
+        height: 600px;
+    }
+    .info-contact {
+        gap: 30px;
+    }
+}
 /* 
 ===================================
 SVG ABOUT US
