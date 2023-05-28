@@ -1,0 +1,23 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* 
+===================================
+Navbar Top
+=================================== */
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+.navbar-right ul{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+.navbar-right a{
+    color: black;
+    text-decoration: none;
+}
