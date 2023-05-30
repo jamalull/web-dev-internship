@@ -10,6 +10,12 @@ const calculate = (btnValue) => {
         // This is use eval() function which is the function can execute any command from string.
         // output = eval(output.replace("%", "/100")); //this function for create percentage calculate, just change '%' with '/100'
         output = eval(output); //this function for create modulus calculate
+        
+        if(output % 2 == 0){
+            alert("Output adalah bilangan genap");
+        } else {
+            alert("Output adalah bilangan ganjil");
+        }
     } else if(btnValue === "AC") {
         output = "";
     } else if(btnValue === "DEL") {
