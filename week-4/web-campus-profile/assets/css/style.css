@@ -15,7 +15,7 @@ Home Page
 .header {
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(../img/banner.png);
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(../img/depok-ui.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -32,6 +32,11 @@ nav {
     align-items: center;
     color: white;
     padding: 25px;
+}
+.navbar-left {
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
 .navbar-right {
     flex: 1;
@@ -166,7 +171,6 @@ nav {
     flex-basis: 31%;
     background: #fff3f3;
     border-radius: 10px;
-    margin-bottom: 5%;
     padding: 20px 12px;
     box-sizing: border-box;
     transition: 0.5s;
@@ -178,6 +182,7 @@ nav {
 @media(max-width: 700px){
     .part-courses {
         flex-direction: column;
+        gap: 30px;
     }
 }
 
@@ -187,7 +192,14 @@ nav {
     width: 80%;
     margin: auto;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 100px;
+}
+.campus p {
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
 }
 .row {
     display: flex;
@@ -259,7 +271,8 @@ nav {
     box-sizing: border-box;
 }
 .part-facilities img {
-    width: 100%;
+    width: 380px;
+    height: 350px;
     border-radius: 10px;
 }
 .part-facilities p {
@@ -273,6 +286,9 @@ nav {
 @media(max-width:700px){
     .part-facilities {
         flex-direction: column;
+    }
+    .part-facilities img {
+        width: 100%;
     }
 }
 
@@ -325,3 +341,91 @@ nav {
 ===================================
 About Page
 =================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+===================================
+FOOTER
+===================================  */
+footer {
+    color: white;
+    background-color: black;
+}
+.footer {
+    margin-top: 200px;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* gap: 20px; */
+}
+.footer img{
+    width: 220px;
+    height: 280px;
+}
+.footer h2 {
+    margin-bottom: 20px;
+}
+/* .footer h1, .footer h2 {
+    font-family: THICCCBOI BOLD;
+}
+.footer ul li , .footer p{
+    font-family: THICCCBOI REGULAR;
+} */
+.footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.footer ul li a{
+    text-decoration: none;
+    color: white;
+}
+.footer-help, .footer-info {
+    line-height: 40px;
+}
+.footer-location {
+    line-height: 30px;
+}
+
+.copyright {
+    height: 30px;
+    color: #838383;
+    background: #202020;
+    text-align: center;
+    padding: 10px;
+}
+
+@media (max-width : 800px){
+    .footer{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .footer img {
+        margin: auto;
+    }
+    .footer h2 {
+        margin-top: 40px;
+    }
+}
