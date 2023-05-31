@@ -21,6 +21,15 @@ Home Page
     position: relative;
     overflow: hidden;
 }
+.header2 {
+    min-height: 60vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(../img/depok-ui.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
 
 nav .bi {
     font-size: 25px;
@@ -275,6 +284,9 @@ nav {
     height: 350px;
     border-radius: 10px;
 }
+.part-facilities img:hover {
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.5);
+}
 .part-facilities p {
     color: #777;
 }
@@ -348,6 +360,91 @@ About Page
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+===================================
+Faculty Page
+=================================== */
+
+
+
+
+
+
+
+
+
+/* 
+===================================
+Contact Page
+=================================== */
+.location{
+    width: 80%;
+    padding: 30px 0;
+    margin: auto;
+    margin-bottom: 100px;
+}
+.location iframe {
+    width: 100%;
+}
+
+.contact {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-around;
+}
+.row-contact {
+    margin-bottom: 40px;
+}
+.row-contact div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.row-contact div .bi {
+    font-size: 30px;
+    margin-right: 20px;
+    color: rgb(233, 233, 34);
+}
+
+.form-contact {
+    width: 50%;
+}
+.form-contact input, .form-contact textarea{
+    width: 100%;
+    padding: 15px;
+    outline: none;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+}
+.form-contact .btnSubmit {
+    display: inline-block;
+    color: black;
+    border: 1px solid black;
+    padding: 12px 34px;
+    font-size: 13px;
+    background-color: transparent;
+    cursor: pointer;
+}
+.form-contact .btnSubmit:hover {
+    border:  1px, solid, rgba(255, 255, 0, 0.707);
+    background: rgba(255, 255, 0, 0.707);
+    transition: 1s;
+}
 
 
 
