@@ -354,10 +354,92 @@ nav {
 ===================================
 About Page
 =================================== */
+.about1 {
+    width: 80%;
+    text-align: center;
+    margin: 100px auto;
+    line-height: 50px;
+}
+
+.about-history {
+    min-height: 80vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(../img/depok-ui.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+.box-history {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+.layer-history h2, .layer-history p {
+    color: white;
+}
+.layer-history h2 {
+    font-size: 60px;
+    margin-bottom: 50px;
+}
+
+.layer-history p {
+    margin: 10px 0 40px;
+    
+}
+
+.layer-history a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 12px 34px;
+    font-size: 13px;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.layer-history a:hover {
+    border:  1px, solid, rgba(255, 255, 0, 0.707);
+    background: rgba(255, 255, 0, 0.707);
+    transition: 1s;
+}
+
+.visimisi {
+    
+    display: flex;
+    margin: 100px auto;
+}
+.visi {
+    background-color: rgba(255, 255, 0, 0.707);
+    width: 50%;
+    padding: 80px 150px;
+    text-align: center;
+}
+.visi p, .misi ol{
+    line-height: 30px;
+}
+.visi h1 {
+    margin-bottom: 50px;
+}
+.misi {
+    background-color: #F3F3F3;
+    padding: 80px 150px;
+}
+.misi h1 {
+    margin-bottom: 50px;
+    text-align: center;
+}
 
 @media(max-width:700px){
     .header2 .banner-home h1{
         font-size: 20px;
+    }
+    .visimisi {
+        flex-direction: column;
+    }
+    .visi, .misi {
+        width: auto;
     }
 }
 
@@ -422,6 +504,9 @@ Faculty Page
 @media(max-width:700px){
     .row-faculty {
         flex-direction: column;
+    }
+    .layer-faculty h5 {
+        font-size: large;
     }
 }
 
