@@ -8,6 +8,7 @@
     <link rel="icon" href="assets/img/Universitas-Indonesia-Logo.png">
 
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style-form.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,8 +19,14 @@
 
     
 
- <!-- /* ---------- Header Section--------------- */ -->
-    <section class="header2">
+    <!-- /* ---------- Header Section--------------- */ -->
+    <div class="highlight">
+        <span>
+            <p><b>Create your student ID card here ...</b></p>
+            <a href="form.html">Click here !</a>
+        </span>
+    </div>
+    <section class="header-form">
         <nav>
             <div class="navbar-left">
                 <img src="assets/img/Universitas-Indonesia-Logo.png" alt="Logo-navbar" width="35" height="35">
@@ -33,7 +40,7 @@
                     <li><a href="about.html">ABOUT</a></li>
                     <li><a href="news.html">NEWS</a></li>
                     <li><a href="faculty.html">FACULTY</a></li>
-                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
                 </ul> 
             </div>
             <i class="bi bi-list" onclick="showMenu()"></i>
@@ -41,7 +48,7 @@
         </nav>
 
         <div class="banner-home">
-            <h1>Form Register Jobfair 2023</h1>
+            <h1>Form Register Students 2023</h1>
     
             <p>If you need help for our service, lets to contact on our Email, Phone, or you can visit to our website.</p>
     
@@ -51,81 +58,106 @@
     </section>
 
     <!-- /* ---------- Location Map Section--------------- */ -->
-    <section class="location">
+    <!-- <section class="location">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63446.21989068849!2d106.8166475425416!3d-6.343674524741946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ec1a804e8b85%3A0xd7bf80e1977cea07!2sUniversitas%20Indonesia!5e0!3m2!1sid!2sid!4v1685535554398!5m2!1sid!2sid" 
             width="600" height="450" style="border:0;" allowfullscreen="" 
             loading="lazy" referrerpolicy="no-referrer-when-downgrade">
         </iframe>
-    </section>
+    </section> -->
 
 
 
-    <!-- /* ---------- Contact Section--------------- */ -->
-    <section class="contact">
-        <div class="row-contact">
-            <div>
-                <i class="bi bi-geo-alt-fill"></i>
-                <span>
-                    <h5>Depok Jawa Barat, Indonesia</h5>
-                    <p>Kampus Pusat depok</p>
-                </span>
-            </div>
-            <div>
-                <i class="bi bi-headset"></i>
-                <span>
-                    <h5>021-1500002 / +62 815 15000002</h5>
-                    <p>Monday to Friday, 08.00 AM to 05.00 PM</p>
-                </span>
-            </div>
-            <div>
-                <i class="bi bi-envelope-at-fill"></i>
-                <span>
-                    <h5>sipp@ui.ac.id / humas-ui@ui.ac.id</h5>
-                    <p>Contacs Us via Email</p>
-                </span>
-            </div>
-            <div>
-                <i class="bi bi-instagram"></i>
-                <span>
-                    <h5>Instagram Account</h5>
-                    <p>@univ_indonesia</p>
-                </span>
-            </div>
-            <div>
-                <i class="bi bi-twitter"></i>
-                <span>
-                    <h5>Twitter Account</h5>
-                    <p>@univ_indonesia</p>
-                </span>
-            </div>
-            <div>
-                <i class="bi bi-facebook"></i>
-                <span>
-                    <h5>Facebook Account</h5>
-                    <p>@UniversitasIndonesia</p>
-                </span>
-            </div>
-        </div>
-
-        <div class="form-contact">
+    <!-- /* ---------- Registration Section--------------- */ -->
+    <!-- <section class="form-register">
+        <div class="form">
             <form action="">
-                <input type="text" placeholder="Input your name" name="name" id="input-name">
+                <input type="text" placeholder="Input your full name" name="name" id="input-name">
+                <span>
+                    <input type="radio" name="gender" id="input-gender1" value="Male">
+                    <label for="input-gender1">Male</label>
+                </span>
+                <span>
+                    <input type="radio" name="gender" id="input-gender2" value="Female">
+                    <label for="input-gender2">Female</label>
+                </span>
                 <input type="email" placeholder="Input your email" name="name" id="input-email">
                 <input type="text" placeholder="Input subject of email" name="name" id="input-subject">
                 <textarea placeholder="Type Message here ..." name="message" id="input-message" cols="30" rows="10"></textarea>
-                <button type="submit" class="btnSubmit">Send Message</button>
+                <button type="submit" class="btnSubmit">Submit</button>
             </form>
         </div>
         
+    </section> -->
+
+    <section class="output-form">
+        <h3>Your ID Card</h3>
+        <div class="box-form">
+            <div>
+                <ul>
+                    <li>Name : Jamalul Ikhsan</li>
+                    <li>Gender : Male</li>
+                    <li>Phone Call : 085156385979</li>
+                    <li>Email : jamalulikhsan19@gmail.com</li>
+                    <li>Birth Place : DKI Jakarta</li>
+                    <li>Birth Date : 19, November 1999</li>
+                    <li>Hobby : Coding</li>
+                </ul>
+            </div>
+            <img src="assets/img/profile/Warek_1-UI.jpg" alt="photo-me" width="150px" height="150px">
+        </div>
     </section>
 
+    <form action="thank-you.html">
+        <h2>Form Registration</h2>
+        <div class="form-group fullname">
+            <label for="fullname">Full Name</label>
+            <input required type="text" id="fullname" placeholder="Enter your full name">
+        </div>
+        <div class="form-group email">
+            <label for="email">Email Address</label>
+            <input required type="text" id="email" placeholder="Enter your email address">
+        </div>
+        <div class="form-group phonecall">
+            <label for="phonecall">Phone Call</label>
+            <input required type="number" id="phonecall" placeholder="Enter your phone call">
+        </div>
+        <div class="form-group hobby">
+            <label for="hobby">My hobby</label>
+            <input required type="text" id="hobby" placeholder="Enter your hobby or passion">
+        </div>
+        <div class="form-group birthplace">
+            <label for="birthplace">Birth Place</label>
+            <input required type="text" id="birthplace" placeholder="Enter your birth place (example : Jakarta)">
+        </div>
+        <div class="form-group date">
+            <label for="date">Birth Date</label>
+            <input required type="date" id="date" placeholder="Select your date">
+        </div>
+        <div class="form-group gender">
+            <label for="gender">Gender</label>
+            <select id="gender">
+                <option value="" selected disabled>Select your gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+        <div class="form-group upload">
+            <label for="upload">Upload Photo</label>
+            <input required type="file" id="myFile" name="filename">
+        </div>
+        
+        <div class="form-group submit-btn">
+            <input required type="submit" value="Submit">
+        </div>
+    </form>
 
     <!-- /* ---------- Footer--------------- */ -->
-    <section class="cta-calendar">
+    <!-- <section class="cta-calendar">
         <h1>Check all activities and important days on our 
             campus in the academic calendar</h1>
             <a href="https://www.ui.ac.id/akademik/kalender-akademik/">Download Calendar</a>
-    </section>
+    </section> -->
 
 
     <!-- /* ---------- Footer--------------- */ -->
