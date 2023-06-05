@@ -1,0 +1,64 @@
+INSERT INTO `mahasiswa`(`nim`, `nama`, `jenis_kelamin`, `ttl`, `alamat`) VALUES (181051100, "Edo Febriansyah","Pria","Bekasi, 18 January 2000","Jl.Bekasi Raya Gg.Makmur RT 4 RW 5, Bekasi Timur, 14550"),
+(181051101, "Edo Febriansyah","Pria","Bekasi, 18 January 2000","Jl.Bekasi Raya Gg.Makmur RT 4 RW 5, Bekasi Timur, 14550"),
+(181051102, "Adi Afthailah","Pria","Bogor, 19 Maret 2000","Jl.Bekasi Raya Gg.Makmur RT 4 RW 5, Bekasi Timur, 14550"),
+(181051103, "Rama Fadill","Pria","Depok, 20 Desember 2000","Jl.Bekasi Raya Gg.Makmur RT 4 RW 5, Bekasi Timur, 14550"),
+(181051104, "Denny Rachmat","Pria","Bekasi, 21 April 2000","Jl.Bekasi Raya Gg.Makmur RT 4 RW 5, Bekasi Timur, 14550"),
+(181051105, "Alex Jovuska","Pria","Solo, 22 January 2000","Jl.Bekasi Raya Gg.Makmur RT 4 RW 5, Bekasi Timur, 14550"),
+(181051106, "Andin Salsabila","Wanita","Jakarta, 23 Desember 2000","Jl.Bekasi Raya Gg.Makmur RT 4 RW 5, Bekasi Timur, 14550"),
+(181051107, "Aurorra Eskova","Wanita","Jakarta, 24 Maret 2000","Jl.Bekasi Raya Gg.Makmur RT 4 RW 5, Bekasi Timur, 14550"),
+(181051108, "Miranti Syauma","Wanita","Bekasi, 25 Desember 2000","Jl.Bekasi Raya Gg.Makmur RT 4 RW 5, Bekasi Timur, 14550"),
+(181051109, "Hanan Nabila","Wanita","Tangerang, 26 April 2000","Jl.Bekasi Raya Gg.Makmur RT 4 RW 5, Bekasi Timur, 14550"),
+(181051110, "Sisca Pricilla","Wanita","Bekasi, 27 Maret 2000","Jl.Bekasi Raya Gg.Makmur RT 4 RW 5, Bekasi Timur, 14550");
+
+
+
+INSERT INTO `mata_kuliah`(`kode_mk`, `nama_mk`, `sks`, `semester`) VALUES 
+(1000, "Basis Data", 4, 1),
+(1001, "Struktur Data", 3, 3),
+(1002, "Pendidikan Agama", 4, 4),
+(1003, "Pemrograman Web", 4, 5),
+(1004, "Analisis Algoritma", 4, 3),
+(1005, "OOP", 4, 5),
+(1006, "Algoritma", 3, 4),
+(1007, "Dasar Pemrograman", 4, 2),
+(1008, "Skripsi", 6, 8),
+(1009, "Proposal Penelitian", 6, 7),
+(1010, "Basis Data", 4, 1);
+
+
+
+ INSERT INTO `nilai`(`nim`, `kode_mk`, `uts`, `uas`, `nilai_akhir`, `grade`) VALUES 
+(181051100, 1000, 80, 85, 80, "A"),
+(181051101, 1001, 70, 88, 78, "B"),
+(181051102, 1002, 60, 76, 70, "B"),
+(181051103, 1003, 75, 90, 80, "A"),
+(181051104, 1004, 73, 90, 80, "A"),
+(181051105, 1005, 68, 85, 79, "B"),
+(181051106, 1006, 85, 80, 82, "A"),
+(181051107, 1007, 79, 78, 83, "A"),
+(181051108, 1008, 83, 78, 80, "A"),
+(181051109, 1009, 70, 85, 84, "A"),
+(181051110, 1010, 70, 87, 85, "A"),
+(181051111, 1000, 80, 85, 80, "A"),
+(181051112, 1001, 70, 88, 78, "B"),
+(181051113, 1002, 60, 76, 70, "B"),
+(181051114, 1003, 75, 90, 80, "A"),
+(181051115, 1004, 73, 90, 80, "A"),
+(181051116, 1005, 68, 85, 79, "B"),
+(181051117, 1006, 85, 80, 82, "A"),
+(181051118, 1007, 79, 78, 83, "A"),
+(181051119, 1008, 83, 78, 80, "A"),
+(181051120, 1009, 70, 85, 84, "A"),
+(181051121, 1010, 70, 87, 85, "A");
+
+
+
+
+SELECT nim, kode_mk, nilai_akhir, grade FROM `nilai` WHERE grade="A";
+
+
+
+SELECT *, MIN(nilai_akhir) as nilai_min, MAX(nilai_akhir) as nilai_maks, AVG(nilai_akhir) as nilai_rataan FROM `nilai`
+
+
+SELECT COUNT(nim) as jml_mhs,grade FROM `nilai` GROUP BY grade
