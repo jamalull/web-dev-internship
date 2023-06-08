@@ -1,3 +1,7 @@
+
+1. Buatlah database mahasiswa ""db_mahasiswa"" 
+2. Buatlah tabel mahasiswa dengan isi field sebagai berikut: - nim (primary key) - nama - jenis_kelamin - ttl - alamat 
+
 INSERT VALUE TO TABLE mahasiswa :
 INSERT INTO `mahasiswa`(`nim`, `nama`, `jenis_kelamin`, `ttl`, `alamat`) VALUES (181051100, "Edo Febriansyah","Pria","Bekasi, 18 January 2000","Jl.Bekasi Raya Gg.Makmur RT 4 RW 5, Bekasi Timur, 14550"),
 (181051101, "Edo Febriansyah","Pria","Bekasi, 18 January 2000","Jl.Bekasi Raya Gg.Makmur RT 4 RW 5, Bekasi Timur, 14550"),
@@ -11,6 +15,7 @@ INSERT INTO `mahasiswa`(`nim`, `nama`, `jenis_kelamin`, `ttl`, `alamat`) VALUES 
 (181051109, "Hanan Nabila","Wanita","Tangerang, 26 April 2000","Jl.Bekasi Raya Gg.Makmur RT 4 RW 5, Bekasi Timur, 14550"),
 (181051110, "Sisca Pricilla","Wanita","Bekasi, 27 Maret 2000","Jl.Bekasi Raya Gg.Makmur RT 4 RW 5, Bekasi Timur, 14550");
 
+3. Buatlah tabel mata kuliah dengan isi field sebagai berikut: - kode_mk (primary key) - nama_mk - sks - semester 
 
 INSERT VALUE TO TABLE mata_kuliah :
 INSERT INTO `mata_kuliah`(`kode_mk`, `nama_mk`, `sks`, `semester`) VALUES 
@@ -26,6 +31,9 @@ INSERT INTO `mata_kuliah`(`kode_mk`, `nama_mk`, `sks`, `semester`) VALUES
 (1009, "Proposal Penelitian", 6, 7),
 (1010, "Basis Data", 4, 1);
 
+4. Buatlah tabel nilai dengan isi field sebagai berikut: - nim - kode_mk - uts - uas - nilai_akhir - grade 
+5. Tambahkan minimal 10 data mahasiswa dan minimal 10 data mata kuliah. 
+6. Tambahkan minimal 20 nilai uts, nilai uas dan nilai akhir (kecuali grade) mahasiswa ke tabel nilai dengan bebrapa mata kuliah. 
 
 INSERT VALUE TO TABLE nilai :
 INSERT INTO `nilai`(`nim`, `kode_mk`, `uts`, `uas`, `nilai_akhir`, `grade`) VALUES 
@@ -55,12 +63,22 @@ INSERT INTO `nilai`(`nim`, `kode_mk`, `uts`, `uas`, `nilai_akhir`, `grade`) VALU
 
 
 COMMAND OF SQL QUERY FOR THE TASK :
+7. Update Grade di tabel nilai dengan ketentuan: 
+- 80 ≤ nilai akhir ≤ 100 grade = A 
+- 70 ≤ nilai akhir ≤ 79 grade = B 
+- 60 ≤ nilai akhir ≤ 69 grade = C 
+- 50 ≤ nilai akhir ≤ 59 grade = D 
+- 0 ≤ nilai akhir ≤ 49 E 
+8. Menampilkan data nim, kode_mk, dan nilai akhir y dengan grade A dan B. 
+9. Menampilkan data nilai maksimal, nilai minimal dan rata-rata dari nilai akhir. 
+10. Menampilkan jumlah mahasiswa yang mengikuti mata kuliah yang ada pada tabel nilai beserta grade yang didapat. 
 
 SELECT nim, kode_mk, nilai_akhir, grade FROM `nilai` WHERE grade="A";
 
-
-
 SELECT *, MIN(nilai_akhir) as nilai_min, MAX(nilai_akhir) as nilai_maks, AVG(nilai_akhir) as nilai_rataan FROM `nilai`
 
-
 SELECT COUNT(nim) as jml_mhs,grade FROM `nilai` GROUP BY grade
+
+SELECT mahasiswa.nim, nilai.kode_mk, nilai.nilai_akhir, nilai.grade FROM mahasiswa
+INNER JOIN nilai
+ON mahasiswa.nim = nilai.nim;
