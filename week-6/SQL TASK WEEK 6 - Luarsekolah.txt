@@ -61,7 +61,7 @@ INSERT INTO `nilai`(`nim`, `kode_mk`, `uts`, `uas`, `nilai_akhir`, `grade`) VALU
 (181051121, 1010, 70, 87, 85, "A");
 
 
-
+================================================================================================
 COMMAND OF SQL QUERY FOR THE TASK :
 7. Update Grade di tabel nilai dengan ketentuan: 
 - 80 ≤ nilai akhir ≤ 100 grade = A 
@@ -69,16 +69,62 @@ COMMAND OF SQL QUERY FOR THE TASK :
 - 60 ≤ nilai akhir ≤ 69 grade = C 
 - 50 ≤ nilai akhir ≤ 59 grade = D 
 - 0 ≤ nilai akhir ≤ 49 E 
+
+Source : https://www.softwaretestinghelp.com/mysql-if-else-statement/ 
+
+
+DELIMITER //
+CREATE FUNCTION CalculateGradeStudents(nilai_akhir INT)
+  RETURNS VARCHAR(10)
+  BEGIN
+    DECLARE Grade VARCHAR(10);
+    IF nilai_akhir <= 100 AND nilai_akhir >= 80 THEN SET Grade = 'A';
+    ELSEIF nilai_akhir <= 79 AND nilai_akhir >= 70 THEN SET Grade = 'B';
+    ELSEIF nilai_akhir <= 69 AND nilai_akhir >= 60 THEN SET Grade = 'C';
+    ELSEIF nilai_akhir <= 59 AND nilai_akhir >= 50 THEN SET Grade = 'D';
+    ELSE SET Grade = 'E';
+    END IF;
+    RETURN Grade;
+  END
+  // 
+  DELIMITER ;
+  
+# If you want only to display the output.
+SELECT nim, nilai_akhir, CalculateGradeStudents(nilai_akhir) AS
+ Grades FROM nilai ORDER BY Grades;
+
+
+# If want to update data then you can using these function.
+UPDATE nilai SET grade = CalculateGradeStudents(nilai_akhir)
+
+
+================================================================================================
+
+COMMAND OF SQL QUERY FOR THE TASK :
 8. Menampilkan data nim, kode_mk, dan nilai akhir y dengan grade A dan B. 
-9. Menampilkan data nilai maksimal, nilai minimal dan rata-rata dari nilai akhir. 
-10. Menampilkan jumlah mahasiswa yang mengikuti mata kuliah yang ada pada tabel nilai beserta grade yang didapat. 
+(SELECT nim, kode_mk, nilai_akhir, grade FROM `nilai` WHERE grade="A" OR grade="B";)
 
-SELECT nim, kode_mk, nilai_akhir, grade FROM `nilai` WHERE grade="A";
-
-SELECT *, MIN(nilai_akhir) as nilai_min, MAX(nilai_akhir) as nilai_maks, AVG(nilai_akhir) as nilai_rataan FROM `nilai`
-
-SELECT COUNT(nim) as jml_mhs,grade FROM `nilai` GROUP BY grade
-
-SELECT mahasiswa.nim, nilai.kode_mk, nilai.nilai_akhir, nilai.grade FROM mahasiswa
+(SELECT mahasiswa.nim, nilai.kode_mk, nilai.nilai_akhir, nilai.grade FROM mahasiswa
 INNER JOIN nilai
-ON mahasiswa.nim = nilai.nim;
+ON mahasiswa.nim = nilai.nim;)
+
+================================================================================================
+
+9. Menampilkan data nilai maksimal, nilai minimal dan rata-rata dari nilai akhir. 
+(SELECT *, MIN(nilai_akhir) as nilai_min, MAX(nilai_akhir) as nilai_maks, AVG(nilai_akhir) as nilai_rataan FROM `nilai`)
+
+================================================================================================
+
+10. Menampilkan jumlah mahasiswa yang mengikuti mata kuliah yang ada pada tabel nilai beserta grade yang didapat. 
+(SELECT COUNT(nim) as jml_mhs,grade FROM `nilai` GROUP BY grade)
+
+================================================================================================
+
+
+
+
+
+
+
+
+
