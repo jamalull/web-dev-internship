@@ -1,5 +1,5 @@
 
-1. Buatlah database mahasiswa ""db_mahasiswa"" 
+1. Buatlah database mahasiswa "db_mahasiswa" 
 2. Buatlah tabel mahasiswa dengan isi field sebagai berikut: - nim (primary key) - nama - jenis_kelamin - ttl - alamat 
 
 INSERT VALUE TO TABLE mahasiswa :
