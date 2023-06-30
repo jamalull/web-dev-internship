@@ -3,3 +3,12 @@
     <input type="submit" class="btn btn-primary" data-dismiss="modal" value="Logout" name="btnLogout">
   </div>
 </form>
+
+
+
+
+
+1) Remaining just coding for Create/Add, Update, and Delete for Data Dosen, Mahasiswa, Mata kuliah.
+2) Show the table for Admin on the Data Mahasiswa (Table students that have been choose a courses). 
+   2 table on the data Mahasiswa table (Table 1 : Table for students displays, and Table 2 : Table for displays students + courses has been choose by them) 
+3) Students can choose courses on the "Pilih Mata Kuliah".
