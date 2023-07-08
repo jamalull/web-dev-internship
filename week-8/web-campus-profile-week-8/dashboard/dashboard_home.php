@@ -21,13 +21,6 @@
     if(empty($_SESSION["user"])) {
       header("location:login_admin.php");
     }
-
-    // if(($_SERVER["REQUEST_METHOD"] == "POST") && isset($_POST["btnLogout"])){
-    //   session_unset();
-    //   session_destroy();
-    //   header("location:login_admin.php");
-    // }
-    
   ?>
   <div id="wrapper">
     <!-- Sidebar -->
@@ -40,7 +33,7 @@
       </a>
       <hr class="sidebar-divider my-0">
       <li class="nav-item active">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="dashboard_home.php">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
       </li>
@@ -48,6 +41,8 @@
       <div class="sidebar-heading">
         Features
       </div>
+
+      <?php if($_SESSION["user"] == "admin"):?>
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBootstrap"
           aria-expanded="true" aria-controls="collapseBootstrap">
@@ -57,14 +52,16 @@
         <div id="collapseBootstrap" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Admin Access</h6>
-            <a class="collapse-item" href="dosen_read.php">Data Dosen</a>
-            <a class="collapse-item" href="buttons.html">Data Mahasiswa</a>
-            <a class="collapse-item" href="dropdowns.html">Data Mata Kuliah</a>
+            <a class="collapse-item" href="dosen.php">Data Dosen</a>
+            <a class="collapse-item" href="mahasiswa.php">Data Mahasiswa</a>
+            <a class="collapse-item" href="matakuliah.php">Data Mata Kuliah</a>
           </div>
         </div>
       </li>
+      <?php endif; ?>
+      
       <li class="nav-item">
-        <a class="nav-link" href="charts.html">
+        <a class="nav-link" href="pilih_matakuliah.php">
           <i class="fas fa-fw fa-book"></i>
           <span>Pilih Mata Kuliah</span>
         </a>
@@ -86,7 +83,7 @@
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 <img class="img-profile rounded-circle" src="img/boy.png" style="max-width: 60px">
-                <span class="ml-2 d-none d-lg-inline text-white small">Maman Ketoprak</span>
+                <span class="ml-2 d-none d-lg-inline text-white small"><?php  echo $_SESSION["user"];?></span>
               </a>
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                 <a class="dropdown-item" href="javascript:void(0);" data-toggle="modal" data-target="#logoutModal">
@@ -113,7 +110,7 @@
           <!--Row-->
           <div class="row">
             <div class="col-lg-12 text-center">
-              <h3>Hello <?php  echo $_SESSION["user"]; echo isset($_POST["btnLogout"]);?>, Welcome to the dashboard.</h3>
+              <h3>Hello <?php  echo $_SESSION["user"];?>, Welcome to the dashboard.</h3>
               <!-- <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
                 <div class="form-group mt-3">
                   <input type="submit" class="btn btn-primary" data-dismiss="modal" value="Logout" name="btnLogout">
