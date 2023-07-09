@@ -41,6 +41,8 @@
       <div class="sidebar-heading">
         Features
       </div>
+
+      <?php if($_SESSION["user"] == "admin"):?>
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBootstrap"
           aria-expanded="true" aria-controls="collapseBootstrap">
@@ -56,6 +58,8 @@
           </div>
         </div>
       </li>
+      <?php endif; ?>
+
       <li class="nav-item">
         <a class="nav-link" href="pilih_matakuliah.php">
           <i class="fas fa-fw fa-book"></i>
@@ -143,7 +147,7 @@
             <div class="col-lg-12">
               <div class="card mb-4">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">DataTables with Hover</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">List Students</h6>
                   <!-- <a href="mahasiswa_create.php" class="btn btn-primary">Add Data +</a> -->
                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createModal">
                     Add Data +
@@ -216,7 +220,7 @@
                                     <input type="hidden" name="nim" value="<?php echo $row["nim"]; ?>">
                                     <div class="form-group mb-2">
                                         <label for="nim">NIM</label>
-                                        <input type="text" name="nim" class="form-control" id="nim" value="<?php echo $row["nim"]; ?>" required disabled>   
+                                        <input type="number" name="nim" class="form-control" id="nim" value="<?php echo $row["nim"]; ?>" required disabled>   
                                     </div>
                                     <div class="form-group mb-2">
                                         <label for="name">Name</label>
@@ -240,7 +244,7 @@
                                 </div> 
                               </div>
                             </div>
-                            </div>
+                          </div>
 
                             <!-- Modal Delete -->
                             <div class="modal fade" id="deleteModal-<?php echo $row["nim"]; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout"
@@ -286,11 +290,10 @@
                 </div>
                 <div class="modal-body">
                   <form action="proses_crud.php" method="POST">
-                    <input type="hidden" name="_method" value="PUT">
                     <input type="hidden" name="action" value="createStudents">
                     <div class="form-group mb-2">
                         <label for="nim">NIM</label>
-                        <input type="text" name="nim" class="form-control" id="nim" required placeholder="Cth : 1810511022">   
+                        <input type="number" name="nim" class="form-control" id="nim" required placeholder="Cth : 1810511022">   
                     </div>
                     <div class="form-group mb-2">
                         <label for="name">Name</label>
