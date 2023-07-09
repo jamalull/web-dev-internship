@@ -424,6 +424,6 @@
       $('#dataTableHover').DataTable(); // ID From dataTable with Hover
     });
   </script>
-</body>
+</body> 
 
 </html>
