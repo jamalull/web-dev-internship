@@ -55,9 +55,11 @@
       $result = $conn->query($sql);
 
       if ($result->num_rows > 0) {
-        session_start();
+        // session_start();
         header("location:dashboard_home.php");
         $_SESSION["user"]= $userType;
+        $_SESSION["email"]= $email;
+        $_SESSION["password"]= $password;
 
       // output data of each row
         while($row = $result->fetch_assoc()) {
@@ -72,9 +74,11 @@
       $result = $conn->query($sql);
 
       if ($result->num_rows > 0) {
-        session_start();
+        // session_start();
         header("location:dashboard_home.php");
         $_SESSION["user"]= $userType;
+        $_SESSION["email"]= $email;
+        $_SESSION["password"]= $password;
 
       // output data of each row
         while($row = $result->fetch_assoc()) {
@@ -121,7 +125,7 @@
                       </div>
                     </div>
                     <div class="form-group">
-                      <input class="btn btn-primary btn-block" name="submit" required type="submit" value="Submit">
+                      <input class="btn btn-primary btn-block" name="submit" required type="submit" value="Login">
                     </div>
                   </form>
                   <hr>
