@@ -222,11 +222,11 @@ if($rowMatkul > 0){
       mysqli_query($conn, "INSERT INTO matkul_mhs VALUES('', '$nim','$kode_mk','$nama_mhs','$course','$sks','$semester')");
       
       $message = "Your data successfull stored on the database.";
-      header("location:matakuliah.php?alert=actionSuccess&message=$message");
+      header("location:pilih_matakuliah.php?alert=actionSuccess&message=$message");
     }
     else{
       $message = "Error! Something Went Wrong. Can't choose courses.";
-      header("location:matakuliah.php?alert=actionFailed&message=$message");
+      header("location:pilih_matakuliah.php?alert=actionFailed&message=$message");
     }
   }
 }

@@ -43,6 +43,8 @@
       <div class="sidebar-heading">
         Features
       </div>
+
+      <?php if($_SESSION["user"] == "admin"):?>
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBootstrap"
           aria-expanded="true" aria-controls="collapseBootstrap">
@@ -52,12 +54,14 @@
         <div id="collapseBootstrap" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Admin Access</h6>
-            <a class="collapse-item" href="dosen_read.php">Data Dosen</a>
-            <a class="collapse-item" href="mahasiswa_read.php">Data Mahasiswa</a>
-            <a class="collapse-item" href="matakuliah_read.php">Data Mata Kuliah</a>
+            <a class="collapse-item" href="dosen.php">Data Dosen</a>
+            <a class="collapse-item" href="mahasiswa.php">Data Mahasiswa</a>
+            <a class="collapse-item" href="matakuliah.php">Data Mata Kuliah</a>
           </div>
         </div>
       </li>
+      <?php endif; ?>
+
       <li class="nav-item">
         <a class="nav-link" href="#">
           <i class="fas fa-fw fa-book"></i>
@@ -81,7 +85,7 @@
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 <img class="img-profile rounded-circle" src="img/boy.png" style="max-width: 60px">
-                <span class="ml-2 d-none d-lg-inline text-white small">Maman Ketoprak</span>
+                <span class="ml-2 d-none d-lg-inline text-white small"><?php  echo $_SESSION["user"];?></span>
               </a>
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                 <a class="dropdown-item" href="javascript:void(0);" data-toggle="modal" data-target="#logoutModal">
@@ -113,12 +117,40 @@
             </div>
           </div>
 
+          <!-- Alert -->
+          <div class="row">
+            <div class="col-lg-12 mb-2">
+                <?php
+                  if(isset($_GET["alert"])){
+                    isset($_GET["message"]) ? $message = $_GET["message"] : $message = "";  
+                    // $message = $_GET["message"];
+                    if($_GET["alert"] == "actionSuccess"){
+                    echo
+                      '<div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <strong>Successfully ! </strong>'.$message.
+                        '<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>'; }
+                      else if($_GET["alert"] == "actionFailed"){
+                      echo
+                      '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <strong>Failed ! </strong>'.$message.
+                        '<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>';
+                    } ?>
+            <?php } ?>
+            </div>
+          </div>
+
           <div class="row">
             <!-- DataTable with Hover -->
             <div class="col-lg-12">
               <div class="card mb-4">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">DataTables with Hover</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">List Available Courses</h6>
                 </div>
                 <div class="table-responsive p-3">
                   <table class="table align-items-center table-flush table-hover" id="dataTableHover">
@@ -129,7 +161,6 @@
                         <th>Mata Kuliah</th>
                         <th>SKS</th>
                         <th>Semester</th>
-                        <th>Action</th>
                       </tr>
                     </thead>
                     <tfoot>
@@ -139,7 +170,6 @@
                         <th>Mata Kuliah</th>
                         <th>SKS</th>
                         <th>Semester</th>
-                        <th>Action</th>
                       </tr>
                     </tfoot>
                     <tbody>
@@ -155,12 +185,6 @@
                             <td><?php echo $row["nama_mk"]; ?></td>
                             <td><?php echo $row["sks"]; ?></td>
                             <td><?php echo $row["semester"]; ?></td>
-                            <td class="">
-                              <div class="btn-group">
-                                <a href="matakuliah_update.php?id=<?php echo $row["kode_mk"]; ?>" class="btn btn-secondary mr-2"><i class="fa fa-wrench mr-2"></i>Edit</a>
-                                <a href="matakuliah_delete.php?id=<?php echo $row["kode_mk"]; ?>" class="btn btn-danger"><i class="fa fa-trash mr-2"></i>Delete</a>
-                              </div>
-                            </td>
                           </tr>
                         <?php 
                       }
@@ -179,23 +203,28 @@
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                   <h6 class="m-0 font-weight-bold text-primary">Silahkan Pilih Mata Kuliah</h6>
                 </div>
-                <div class="card-body">        
-                  <div class="form-group">
-                    <label for="select2SinglePlaceholder">Mata Kuliah : </label>
-                    <select class="select2-single-placeholder form-control" name="state" id="select2SinglePlaceholder">
-                      <option value="">Select</option>
-                      <?php 
-                        $conn = mysqli_connect("localhost", "root", "", "db_mahasiswa");
-                        $No =1;
-                        $data = mysqli_query($conn, "SELECT * FROM mata_kuliah ORDER BY kode_mk ASC");
-                        while($row = mysqli_fetch_array($data)){
-                      ?>
-                        <option value="<?php echo $row["nama_mk"];?>" > <?php echo $row["nama_mk"];?></option>
-                      <?php 
-                      }?>
-                    </select>
-                  </div>
-                  <a href="#" class="btn btn-primary">Submit</a>
+                <div class="card-body">       
+                  <form action="proses_crud.php" method="POST">
+                    <input type="hidden" name="action" value="pilihMatkul">
+                    <input type="hidden" name="email" value="<?php echo $_SESSION["email"]; ?>">
+                    <input type="hidden" name="password" value="<?php echo $_SESSION["password"]; ?>">
+                    <div class="form-group">
+                      <label for="select2SinglePlaceholder">Mata Kuliah : </label>
+                      <select class="select2-single-placeholder form-control" name="state" id="select2SinglePlaceholder">
+                        <option value="" >Select</option>
+                        <?php 
+                          $conn = mysqli_connect("localhost", "root", "", "db_mahasiswa");
+                          $No =1;
+                          $data = mysqli_query($conn, "SELECT * FROM mata_kuliah ORDER BY kode_mk ASC");
+                          while($row = mysqli_fetch_array($data)){
+                        ?>
+                          <option value="<?php echo $row["nama_mk"];?>" > <?php echo $row["nama_mk"];?></option>
+                        <?php 
+                        }?>
+                      </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
                 </div>
               </div>
             </div>
