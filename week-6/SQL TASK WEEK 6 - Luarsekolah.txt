@@ -3,7 +3,7 @@
 2. Buatlah tabel mahasiswa dengan isi field sebagai berikut: - nim (primary key) - nama - jenis_kelamin - ttl - alamat 
 
 INSERT VALUE TO TABLE mahasiswa :
-INSERT INTO `mahasiswa`(`nim`, `nama`, `jenis_kelamin`, `ttl`, `alamat`) VALUES (181051100, "Edo Febriansyah","Pria","Bekasi, 18 January 2000","Jl.Bekasi Raya Gg.Makmur RT 4 RW 5, Bekasi Timur, 14550"),
+INSERT INTO `mahasiswa`(`nim`, `nama`, `jenis_kelamin`, `ttl`, `alamat`) VALUES (181051100, "Aldo Maaruf","Pria","Tangerang, 18 January 2000","Jl.Tangsel Raya Gg.Makmur RT 4 RW 5, Tangerang Timur, 13774"),
 (181051101, "Edo Febriansyah","Pria","Bekasi, 18 January 2000","Jl.Bekasi Raya Gg.Makmur RT 4 RW 5, Bekasi Timur, 14550"),
 (181051102, "Adi Afthailah","Pria","Bogor, 19 Maret 2000","Jl.Bekasi Raya Gg.Makmur RT 4 RW 5, Bekasi Timur, 14550"),
 (181051103, "Rama Fadill","Pria","Depok, 20 Desember 2000","Jl.Bekasi Raya Gg.Makmur RT 4 RW 5, Bekasi Timur, 14550"),

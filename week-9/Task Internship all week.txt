@@ -1,0 +1,114 @@
+Week 1 :
+1. Buatlah tampilan sederhana Riwayat Hidup (CV) masing-masing yang terdiri dari: 
+- Identitas Diri (nama lengkap, alamat, no. telp, email, foto, dll) ✔
+-  Pendidikan (pendidikan terakhir, jurusan dan IPK) ✔
+-  Personalitas (gambaran singkat karakter diri kamu) ✔
+- Keterampilan (keterampilan yang kamu miliki) ✔
+- Proyek dan Pengalaman Kerja (hal yang sudah kamu selesaikan pada pekerjaan sebelumnya atau penghargaan yang pernah kamu dapatkan)✔
+- Training/Pelatihan Terbaru (pelatihan yang telah diikuti 2-3 tahun terakhir) ✔
+- Informasi lain tentang Diri kamu (hobi, referensi atau hal lain tentang diri kamu yang berhubungan dengan pekerjaan yang kamu lamar).✔
+
+2. Gunakan beberapa tools HTML yang telah dipelajari. 
+3. Kemudian simpan project degan nama ""TM1_NAMA.zip"" 
+
+Upload ke Google Drive masing-masing dan masukkan link tugas pada Magang+ Tools: Text Editor (Visual Studio Code, Sublime Text, Notepad, dll)
+
+Week 2 :
+1. Buatlah project Web Company Profile yang terdiri dari: 
+- Landing Page ✔
+- Menu atau Navigasi ✔
+- Kontak Informasi Perusahaan✔
+- Sejarah Singkat ✔
+- Biografi Singkat ✔
+- Visi & Misi Perusahaan ✔
+- Anggota Tim ✔
+2. Implementasikan beberapa tools CSS yang telah dipelajari. 
+3. Kemudian simpan project degan nama ""TM2_NAMA.zip""
+
+Upload ke Google Drive masing-masing dan masukkan link tugas pada Magang+ Tools: Text Editor (Visual Studio Code, Sublime Text, Notepad, dll)
+
+Week 3 :
+1. Buatlah project kalkulator sederhana dengan menggunakan javascript. 
+2. Kalkulator ini menyediakan 5 pilihan menu untuk operasi aritmatika, yakni penambahan, pengurangan, perkalian, pembagian dan modulus (sisa hasil bagi). 
+3. Saat program kalkulator dijalankan, user bisa memilih salah satu menu lalu menginput angka pertama dan angka kedua. 
+4. Setelah itu program akan menampilkan hasil dari operasi yang terjadi.
+5. Kemudian simpan project degan nama ""TM3_NAMA.zip"" 
+
+Upload ke Google Drive masing-masing dan masukkan link tugas pada Magang+ Tools: Text Editor (Visual Studio Code, Sublime Text, Notepad, dll)
+
+
+Week 4 :
+1. Buatlah website sederhana untuk Profile Sekolah/Kampus yang terdiri dari: 
+- Top Menu (beranda, tentang kami, kontak, visi & misi, biografi, sejarah, dll) - Header - Slider - Berita - Video - Kalender Akademik - Akun Sosial Media - Footer ✔
+2. Implementasikan tools HTML, CSS dan Javascript yang telah dipelajari. 
+3. Kemudian simpan project degan nama ""TM4_NAMA.zip"" 
+
+Upload ke Google Drive masing-masing dan masukkan link tugas pada Magang+ Tools: Text Editor (Visual Studio Code, Sublime Text, Notepad, dll)
+
+
+Week 5 :
+1. Buatlah program Formulir Registrasi dengan menggunakan bahasa pemrograman PHP. ✔
+2. Formulir Registrasi tersebut berjumlah 2 bagian, yaitu bagian input(formulir pengisian) dan bagian output(hasil dari pengisian). ✔
+3. Pada bagian input, user mengisi data nama lengkap, jenis kelamin, tempat tgl lahir, alamat, email, no hp, hobi dan upload foto diri. ✔
+4. Tambah 1 tombol untuk menyimpan data yang sudah diinputkan. ✔
+5. Jika ada data yang tidak terisi ketika tombol simpan diklik, maka program menampilkan alert warning. ✔
+6. Jika data yang diinput sudah lengkap maka program akan menampilkan: - Kartu hasil registrasi (dibuat mirip seperti KTP) - Jika jenis kelamin yang diinput laki-laki, maka background color kartu berwarna biru dengan font berwarna hitam. - Dan jika jenis kelamin yang diinput perempuan, maka background color kartu berwarna kuning dengan font berwarna putih. ✔
+7. Implementasikan tools HTML, CSS dan Javascript yang telah dipelajari. ✔
+8. Kemudian simpan project degan nama ""TM5_NAMA.zip"" ✔
+9. Upload ke Google Drive masing-masing dan masukkan link tugas pada Magang+ Tools: Text Editor (Visual Studio Code, Sublime Text, Notepad, dll).✔
+
+Week 6 :
+1. Buatlah database mahasiswa ""db_mahasiswa"" 
+2. Buatlah tabel mahasiswa dengan isi field sebagai berikut: - nim (primary key) - nama - jenis_kelamin - ttl - alamat 
+3. Buatlah tabel mata kuliah dengan isi field sebagai berikut: - kode_mk (primary key) - nama_mk - sks - semester 
+4. Buatlah tabel nilai dengan isi field sebagai berikut: - nim - kode_mk - uts - uas - nilai_akhir - grade 
+5. Tambahkan minimal 10 data mahasiswa dan minimal 10 data mata kuliah. 
+6. Tambahkan minimal 20 nilai uts, nilai uas dan nilai akhir (kecuali grade) mahasiswa ke tabel nilai dengan bebrapa mata kuliah. 
+7. Update Grade di tabel nilai dengan ketentuan: 
+- 80 ≤ nilai akhir ≤ 100 grade = A 
+- 70 ≤ nilai akhir ≤ 79 grade = B 
+- 60 ≤ nilai akhir ≤ 69 grade = C 
+- 50 ≤ nilai akhir ≤ 59 grade = D 
+- 0 ≤ nilai akhir ≤ 49 E 
+8. Menampilkan data nim, kode_mk, dan nilai akhir y dengan grade A dan B. 
+9. Menampilkan data nilai maksimal, nilai minimal dan rata-rata dari nilai akhir. 
+10. Menampilkan jumlah mahasiswa yang mengikuti mata kuliah yang ada pada tabel nilai beserta grade yang didapat. 
+11. Simpan tugas degan nama ""TM6_NAMA.zip"" dengan isi (tb_mahasiswa.sql & query.docs) 
+
+Upload ke Google Drive masing-masing dan masukkan link tugas pada Magang+ Tools: MySQL/Oracle/MariaDb/MongoDb/SQL Server (Pilih salah satu)
+
+Week 7 :
+1. Buatlah database (tambah tabel sesuai kebutuhan) sesuai dengan project ""Profile Sekolah/Kampus"" yang sudah dibuat pada minggu ke 4. 
+2. Kemudian integrasikan antara database yang sudah dibuat dengan project. 
+3. Jika sudah terintegrasi buat fitur login (input username/email dan password) untuk mengakses website. 
+4. Kemudian simpan project degan nama ""TM7_NAMA.zip"" termasuk di dalamnya file database (.sql) 
+
+Upload ke Google Drive masing-masing dan masukkan link tugas pada Magang+ 
+Tools: Text Editor (Visual Studio Code, Sublime Text, Notepad, dll), MySQL/Oracle/MariaDb/MongoDb/SQL Server (Pilih salah satu), XAMPP Control Panel
+
+Week 8 :
+1. Berdasarkan project yang telah dibuat pada minggu sebelumnya, kembangkan dengan menambah beberapa fitur sebagai berikut: 
+- Tambah 1 role user untuk admin 
+- Tambah menu ""Kelola Data"" pada Top Menu (Menu ini hanya bisa diakses dengan role user admin) 
+- Pada menu ""Kelola Data"", admin dapat menambah, mengubah serta menghapus ""Data Siswa/Mahasiswa"", ""Data Guru/Dosen"", ""Data Mata Pelajaran/Data Mata Kuliah"".
+-  Pada role member, tambahkan menu ""Pilih Matkul/Mapel"" (siswa dapat memilih lebih dari 1 mapel/matkul berdasarkan data yang admin tambahkan) - Pada role admin, menampilkan data siswa/mahasiswa yang telah memilih mapel/matkul. 
+2. Kemudian simpan project degan nama ""TM8_NAMA.zip"" 
+
+Upload ke Google Drive masing-masing dan masukkan link tugas pada Magang+ Tools: Text Editor (Visual Studio Code, Sublime Text, Notepad, dll), MySQL/Oracle/MariaDb/MongoDb/SQL Server (Pilih salah satu), XAMPP Control Panel
+
+Week 9 :
+1. Pada tugas ini peserta akan mengubah tugas mingguan pada minggu ke 8 menjadi sebuah git repository dan menyimpannya di Github. 
+2. Langkah : 
+- Pertama peserta diharuskan mempunyai akun Github terlebih dahulu. 
+- Kemudian peserta membuat 1 repository project dengan nama sesuai dengan nama project yang dibuat pada tugas minggu ke 8. 
+- Setelah repository dibuat, kemudian ikut instruksi yang diberikan github untuk menambakan data pada repository. 
+3. Kemudian kirim link repository github peserta pada website Magang+
+
+Week 10 :
+Project For Design frontend web from figma.
+
+Week 11 :
+Project For Design frontend web from figma.
+
+Week 12 :
+Project For Design frontend web from figma.
