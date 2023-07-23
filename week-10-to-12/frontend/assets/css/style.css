@@ -1,0 +1,21 @@
+* {
+  font-family: 'Poppins', sans-serif;
+}
+nav {
+  height: 123px;
+}
+
+nav .container-fluid {
+  margin: 0 82px;
+}
+
+.nav-item .category {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px; /* 150% */
+}
+
+.input-group .search {
+  width: 50%;
+}
