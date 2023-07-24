@@ -1,21 +1,162 @@
 * {
   font-family: 'Poppins', sans-serif;
 }
-nav {
+/* nav {
   height: 123px;
-}
+} */
 
-nav .container-fluid {
+nav .container-fluid, .main-content, .main-content2{
   margin: 0 82px;
 }
 
-.nav-item .category {
+.nav-item .text1, .nav-item .text2, .nav-item .text3, .nav-item .text4 {
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
   line-height: 30px; /* 150% */
 }
 
-.input-group .search {
-  width: 50%;
+.tabs {
+  margin: 49px 0;
+}
+.tabs ul li {
+  margin-right: 48px;
+}
+.tabs ul li a{
+  color: #2B2B2B;
+}
+.tabs ul li a:hover{
+  color: #00AF94;
+}
+.tabs ul li a:active{
+  color: #00AF94;
+}
+.tabs ul .nav-item .active {
+  color: #00AF94;
+}
+
+.main-content button {
+  margin-top: 2px;
+  width: 195px;
+  height: 45px;
+}
+
+.cards {
+  margin: 32px 0;
+  padding: 28px 32px;
+  border-radius: 8px;
+  background: var(--white, #FFF);
+  box-shadow: 0px 4px 15px 0px rgba(165, 165, 165, 0.25);
+}
+.top-card a{
+  color: var(--neutral, #2B2B2B);
+
+  /* Body 3 */
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
+.top-card p {
+  color: var(--gray, #A5A5A5);
+
+  /* Body 4 */
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px; /* 150% */
+}
+.card-subtitle {
+  color: var(--neutral, #2B2B2B);
+
+  /* Heading 5 */
+  font-family: Poppins;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+
+  margin-top: 12px;
+  margin-bottom: 20px;
+}
+.koinLS {
+  margin: 20px 10px;
+  padding: 10px;
+  border-radius: 8px;
+  background: var(--white, #FFF);
+  box-shadow: 0px 4px 15px 0px rgba(165, 165, 165, 0.25);
+}
+
+
+
+/* ========== Tambah Diskusi Style ============== */
+.main-content2 .btn-kembalidiskusi p{
+  margin-top: 46px;
+
+  color: var(--neutral-gray-400, #A5A5A5);
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.main-content2 .btn-kembalidiskusi {
+  text-decoration: none;
+  margin-bottom: 57px;
+}
+.main-content2 form {
+  margin-top: 41px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.main-content2 form input {
+  height: 68px;
+  border: 1px solid gray;
+}
+.main-content2 form textarea {
+  border: 1px solid gray;
+}
+.answer-container {
+  margin-top: 60px;
+}
+
+.answer-container h4 {
+  color: #000;
+
+  /* Heading 6 */
+  font-family: Poppins;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 42px; /* 150% */
+}
+
+.answer-container .text5 {
+  color: var(--primary-600, #00AF94);
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.answer-container .text6 {
+  color: var(--gray, #A5A5A5);
+
+  /* Body 4 */
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px; /* 150% */
+}
+
+.text-overflow-clamp {
+  width: 100%;
+  /* this code clamps based on specified lines */
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
 }
