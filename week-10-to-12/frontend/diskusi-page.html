@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Diskusi Page - Dashboard</title>
+    <link rel="stylesheet" href="../frontend/assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- NAVBAR START -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="../frontend/assets/img/koinls-page-img/LS-logo-master.png" alt="Logo" width="149" height="92" class="d-inline-block align-text-top">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mb-2 mb-lg-0 me-4">
+            
+            <li class="nav-item dropdown">
+
+              <a class="nav-link active dropdown-toggle text1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Kategori
+              </a>
+
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Kategori 1</a></li>
+                <li><a class="dropdown-item" href="#">Kategori 2</a></li>
+                <li><a class="dropdown-item" href="#">Kategori 3</a></li>
+                <li><a class="dropdown-item" href="#">Kategori 4</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Lorem ipsum dolor sit amet.</a></li>
+              </ul>
+
+            </li>
+
+          </ul>
+
+          <!-- <form class="d-flex me-auto input-group-lg search" role="search">
+            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+            <span class="input-group-text">$</span>
+          </form> -->
+
+          <form class="input-group input-group-lg w-50 me-4">
+            <input class="form-control search" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2">
+              <img src="../frontend/assets/img/diskusi-page-img/Search.svg" alt="">
+            </button>
+          </form>
+
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item me-2">
+              <a class="nav-link active text2" href="#">Magang+</a>
+            </li>
+            <li class="nav-item me-2">
+              <a class="nav-link active text3" href="#">Prakerja</a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+
+              <a class="nav-link active text4" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-person-circle"></i> Name Profile
+              </a>
+
+              <ul class="dropdown-menu text-center">
+                <div class="d-flex">
+                  <div class="koinLS">
+                    <img src="../frontend/assets/img/koinls-page-img/coins.svg" alt="" width="25" height="25">
+                    <p>500 koinLS</p>
+                  </div>
+                  <div class="koinLS">
+                    <img src="../frontend/assets/img/koinls-page-img/coins.svg" alt="" width="25" height="25">
+                    <p>500 koinLS</p>
+                  </div>
+                </div>
+                <li><a class="dropdown-item" href="#">Kelas Saya</a></li>
+                <li><a class="dropdown-item" href="#">Akun Saya</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item text-danger" href="#">Keluar Akun</a></li>
+              </ul>
+
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+    <!-- NAVBAR ENDS -->
+
+    <div class="main-content">
+      <!-- TABS START -->
+      <div class="tabs">
+        <ul class="nav nav-underline">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Materi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Post Test</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Tugas Praktik</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sesi Konsultasi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Active</a>
+          </li>
+        </ul>
+      </div>
+      <!-- TABS ENDS -->
+
+      <a href="tambah-diskusi.html" type="button" class="btn btn-outline-success">+ Tambah Diskusi</a>
+
+      <!-- CARD START -->
+      <div class="cards">
+        <div class="card-body">
+          <div class="top-card d-flex">
+            <a class="nav-link me-4" href="#" role="button">
+              <i class="bi bi-person-circle"></i> Jane Doe
+            </a>
+            <p>4 menit yang lalu</p>
+          </div>
+          <p class="card-subtitle mb-2 text-body-secondary">Tips dan Trik Untuk Menulis Konten</p>
+          <div class="bottom-card">
+            <a class="nav-link me-4" href="forum-diskusi.html" role="button">
+              <i class="bi bi-chat-fill me-2"></i> <span class="text5">2 Jawaban</span>
+            </a>
+            
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="cards">
+        <div class="card-body">
+          <div class="top-card d-flex">
+            <a class="nav-link me-4" href="#" role="button">
+              <i class="bi bi-person-circle"></i> Jane Doe
+            </a>
+            <p>4 menit yang lalu</p>
+          </div>
+          <p class="card-subtitle mb-2 text-body-secondary">Tips dan Trik Untuk Menulis Konten</p>
+          <div class="bottom-card">
+            <a class="nav-link me-4" href="forum-diskusi.html" role="button">
+              <i class="bi bi-chat-fill me-2"></i> <span class="text5">2 Jawaban</span>
+            </a>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card-body">
+          <div class="top-card d-flex">
+            <a class="nav-link me-4" href="forum-diskusi.html" role="button">
+              <i class="bi bi-person-circle"></i> Jane Doe
+            </a>
+            <p>4 menit yang lalu</p>
+          </div>
+          <p class="card-subtitle mb-2 text-body-secondary">Tips dan Trik Untuk Menulis Konten</p>
+          <div class="bottom-card">
+            <a class="nav-link me-4" href="forum-diskusi.html" role="button">
+              <i class="bi bi-chat-fill me-2"></i> <span class="text5">2 Jawaban</span>
+            </a>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card-body">
+          <div class="top-card d-flex">
+            <a class="nav-link me-4" href="forum-diskusi.html" role="button">
+              <i class="bi bi-person-circle"></i> Jane Doe
+            </a>
+            <p>4 menit yang lalu</p>
+          </div>
+          <p class="card-subtitle mb-2 text-body-secondary">Tips dan Trik Untuk Menulis Konten</p>
+          <div class="bottom-card">
+            <a class="nav-link me-4" href="forum-diskusi.html" role="button">
+              <i class="bi bi-chat-fill me-2"></i> <span class="text5">2 Jawaban</span>
+            </a>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card-body">
+          <div class="top-card d-flex">
+            <a class="nav-link me-4" href="forum-diskusi.html" role="button">
+              <i class="bi bi-person-circle"></i> Jane Doe
+            </a>
+            <p>4 menit yang lalu</p>
+          </div>
+          <p class="card-subtitle mb-2 text-body-secondary">Tips dan Trik Untuk Menulis Konten</p>
+          <div class="bottom-card">
+            <a class="nav-link me-4" href="forum-diskusi.html" role="button">
+              <i class="bi bi-chat-fill me-2"></i> <span class="text5">2 Jawaban</span>
+            </a>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card-body">
+          <div class="top-card d-flex">
+            <a class="nav-link me-4" href="forum-diskusi.html" role="button">
+              <i class="bi bi-person-circle"></i> Jane Doe
+            </a>
+            <p>4 menit yang lalu</p>
+          </div>
+          <p class="card-subtitle mb-2 text-body-secondary">Tips dan Trik Untuk Menulis Konten</p>
+          <div class="bottom-card">
+            <a class="nav-link me-4" href="forum-diskusi.html" role="button">
+              <i class="bi bi-chat-fill me-2"></i> <span class="text5">2 Jawaban</span>
+            </a>
+            
+          </div>
+        </div>
+      </div>
+
+
+      <!-- CARD END -->
+
+
+    </div>
+    
+
+    
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
+</html>
