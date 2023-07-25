@@ -5,7 +5,7 @@
   height: 123px;
 } */
 
-nav .container-fluid, .main-content, .main-content2{
+nav .container-fluid, .main-content, .main-content2, .main-content3{
   margin: 0 82px;
 }
 
@@ -91,7 +91,7 @@ nav .container-fluid, .main-content, .main-content2{
 
 
 
-/* ========== Tambah Diskusi Style ============== */
+/* ========== Tambah Diskusi Page Style ============== */
 .main-content2 .btn-kembalidiskusi p{
   margin-top: 46px;
 
@@ -159,4 +159,139 @@ nav .container-fluid, .main-content, .main-content2{
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   display: -webkit-box;
+}
+
+
+/* ========== Koin LS Page Style ============== */
+.main-content3 .banner {
+  padding: 65px 0;
+  border-radius: 8px;
+  background: var(--primary-600, #00AF94);
+}
+
+.main-content3 .content{
+  margin-top: 40px;
+}
+.main-content3 .content-right{
+  margin-left: 30px;
+}
+
+.sidebar-menu {
+  width: 360px;
+}
+.sidebar-menu .nav li {
+  margin-bottom: 27px;
+}
+.sidebar-menu .nav li a{
+  color: var(--neutral, #2B2B2B);
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.sidebar-menu .nav li .active {
+  border-radius: 8px;
+  color: #00AF94;
+  border: 1px solid var(--primary-600, #00AF94);
+}
+.sidebar-menu .nav li a:hover {
+  border-radius: 8px;
+  color: #00AF94;
+  border: 1px solid var(--primary-600, #00AF94);
+}
+
+.koinLS-2 {
+  width: 70%;
+  margin-right: 43px;
+  padding: 25px 0;
+  border-radius: 8px;
+  background: var(--white, #FFF);
+  box-shadow: 0px 4px 15px 0px rgba(165, 165, 165, 0.25);
+}
+.koinLS-2 img {
+  padding-bottom: 37px;
+}
+
+ /* CREATE CUSTOM BUTTON */
+.btn-koinLS, .btn-question, .btn-comment, .btn-tantangan {
+  border-style: none;
+  color: white;
+  border-radius: 8px;
+  background: var(--primary-600, #00AF94);
+}
+.btn-koinLS:hover, .btn-question:hover, .btn-comment:hover, .btn-tantangan:hover {
+  border-style: none;
+  color: white;
+  border-radius: 8px;
+  background: var(--primary-600, #00af95e5);
+}
+.voucher-card .card{
+  background: var(--white, #FFF);
+  box-shadow: 0px 4px 15px 0px rgba(165, 165, 165, 0.25);
+}
+.btn-tantangan {
+  width: 177px;
+  height: 56px;
+  align-self: center;
+  /* margin: 42px 0;
+  margin-right: 43px; */
+}
+
+
+/* ========== Dashboard Page Style ============== */
+.status-box {
+  width: 70%;
+  margin-right: 20px;
+  padding: 13px 0;
+  border-radius: 8px;
+  background: var(--white, #FFF);
+  box-shadow: 0px 4px 15px 0px rgba(165, 165, 165, 0.25);
+}
+.status-box p {
+  margin: 0;
+}
+.subtitle {
+  color: var(--gray, #A5A5A5);
+  margin-top: 16px;
+  /* Body 2 */
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px; /* 150% */
+}
+
+.tantangan-selesai .box, .tantangan-tersedia .box, .tantangan-berlangsung .box {
+  padding: 24px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  background: var(--white, #FFF);
+  box-shadow: 0px 4px 15px 0px rgba(165, 165, 165, 0.25);
+}
+.tantangan-selesai .box .status-point {
+  padding: 11px 7px;
+  width: 163px;
+  color: #936D00;
+  text-align: center;
+
+  /* Body 3 */
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  
+  border-radius: 8px;
+  background: #FFF099;
+}
+.box span {
+  color: var(--gray, #A5A5A5);
+
+  /* Body 4 */
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px; /* 150% */
 }
